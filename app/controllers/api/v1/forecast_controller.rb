@@ -9,8 +9,6 @@ class Api::V1::ForecastController < ApplicationController
     json = JSON.parse(response.body, symbolize_names: true)
 
     lat_long = json[:results].first[:locations].first[:latLng]
-
-
   end
 
   def forecast_params

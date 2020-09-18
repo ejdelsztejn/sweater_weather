@@ -7,7 +7,7 @@ RSpec.describe 'Geocoding Facade' do
 
   it '#get_location_data' do
     geocoding = @geocoding_facade.get_location_data
-    expect(geocoding.content_type).to eq("application/json")
+    expect(geocoding).to be_a(Hash)
   end
 
   it '#find_lat_long' do
