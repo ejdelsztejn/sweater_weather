@@ -11,12 +11,12 @@
           null,
           null,
           1,
-          0,
+          1,
           0,
           null,
           null,
           1,
-          0,
+          1,
           0,
           0,
           0,
@@ -320,8 +320,8 @@
           1,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           0,
           null,
@@ -334,6 +334,11 @@
       "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/facades/geocoding_facade.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -345,28 +350,28 @@
       },
       "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/controllers/api/v1/forecast_controller.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1600437061
+    "timestamp": 1600437146
   }
 }
