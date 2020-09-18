@@ -340,7 +340,7 @@
           1,
           1,
           null,
-          0,
+          1,
           null,
           null
         ]
@@ -399,10 +399,20 @@
       "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/services/geocoding_service.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1600438047
+    "timestamp": 1600438800
   }
 }

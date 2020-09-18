@@ -5,6 +5,6 @@ RSpec.describe 'GeocodingService' do
     location_service = GeocodingService.new
     results = location_service.location_data('denver,co')
 
-    expect(results).to be_a(Array)
+    expect(results).to be_a(Hash)
   end
 end
