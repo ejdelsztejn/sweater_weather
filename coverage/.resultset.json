@@ -331,6 +331,20 @@
           null
         ]
       },
+      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/services/geocoding_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/facades/geocoding_facade.rb": {
         "lines": [
           1,
@@ -383,6 +397,6 @@
         ]
       }
     },
-    "timestamp": 1600437333
+    "timestamp": 1600437898
   }
 }
