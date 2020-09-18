@@ -10,8 +10,7 @@ class Api::V1::ForecastController < ApplicationController
 
     lat_long = json[:results].first[:locations].first[:latLng]]
 
-    geocoding_facade = GeocodingFacade.new(location)
-    lat_long = geocoding_facade.find_lat_long
+
   end
 
   def forecast_params
