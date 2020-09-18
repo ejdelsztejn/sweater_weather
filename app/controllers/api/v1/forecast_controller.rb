@@ -5,6 +5,10 @@ class Api::V1::ForecastController < ApplicationController
     conn = Faraday.new('http://www.mapquestapi.com')
 
     response = conn.get("/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{location}")
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    lat_long = json[:results].first[:locations].first[:latLng]]
     require "pry"; binding.pry
   end
 
