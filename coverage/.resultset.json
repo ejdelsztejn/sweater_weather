@@ -10,8 +10,8 @@
           1,
           null,
           1,
-          0,
-          0,
+          1,
+          1,
           null,
           0,
           null,
@@ -317,10 +317,13 @@
       "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/controllers/api/v1/forecast_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1600435286
+    "timestamp": 1600435330
   }
 }
