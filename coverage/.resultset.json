@@ -318,17 +318,16 @@
         "lines": [
           1,
           1,
-          1,
           null,
           null,
           null,
           1,
-          1,
+          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1600435400
+    "timestamp": 1600435437
   }
 }

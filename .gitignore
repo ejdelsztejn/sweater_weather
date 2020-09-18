@@ -29,3 +29,6 @@
 # Ignore coverage
 /coverage.data
 /coverage/
+
+# Ignore application configuration
+/config/application.yml
