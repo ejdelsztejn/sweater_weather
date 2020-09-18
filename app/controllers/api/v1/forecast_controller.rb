@@ -9,7 +9,9 @@ class Api::V1::ForecastController < ApplicationController
     json = JSON.parse(response.body, symbolize_names: true)
 
     lat_long = json[:results].first[:locations].first[:latLng]]
-    require "pry"; binding.pry
+
+    geocoding_facade = GeocodingFacade.new(location)
+    lat_long = geocoding_facade.find_lat_long
   end
 
   def forecast_params
