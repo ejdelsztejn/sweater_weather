@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe DailyForecast do
+describe HourlyForecast do
   it 'exists' do
     attrs = {
       dt: 1600692843,
