@@ -1,25 +1,36 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/facades/geocoding_facade_spec.rb": {
+      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/poros/daily_forecast_spec.rb": {
         "lines": [
           1,
           null,
           1,
           1,
-          0,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           1,
-          0,
-          0,
-          null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -311,142 +322,32 @@
           null
         ]
       },
-      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/poros/current_forecast_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/poros/current_forecast.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/poros/daily_forecast_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null
-        ]
-      },
       "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/app/poros/daily_forecast.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/requests/api/v1/forecast_spec.rb": {
-        "lines": [
           1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
           1,
           1,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/jejdelman/turing/module3/projects/final_project/sweater_weather/spec/services/geocoding_service_spec.rb": {
-        "lines": [
-          1,
-          null,
           1,
           1,
-          0,
-          0,
-          null,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1600700257
+    "timestamp": 1600701045
   }
 }
