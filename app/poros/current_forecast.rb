@@ -7,18 +7,17 @@ class CurrentForecast
               :visibility,
               :uvi,
               :sunrise,
-              :sunset,
-              :description
+              :sunset
 
   def initialize(data)
-    @dt = data[:current][:dt]
-    @temp = data[:current][:temp].round(0)
-    @weather_condition = data[:current][:weather].first[:main]
-    @feels_like = data[:current][:feels_like].round(0)
-    @humidity = data[:current][:humidity]
-    @visibility = data[:current][:visibility]
-    @uvi = data[:current][:uvi]
-    @sunrise = data[:current][:sunrise]
-    @sunset = data[:current][:sunset]
+    @dt = data[:dt]
+    @temp = data[:temp].round(0)
+    @weather_condition = data[:weather].first[:main]
+    @feels_like = data[:feels_like].round(0)
+    @humidity = data[:humidity]
+    @visibility = data[:visibility]
+    @uvi = data[:uvi]
+    @sunrise = data[:sunrise]
+    @sunset = data[:sunset]
   end
 end

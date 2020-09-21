@@ -6,8 +6,10 @@ class Api::V1::ForecastController < ApplicationController
     response = conn.get("/data/2.5/onecall?lat=#{coordinates[:lat]}&lon=#{coordinates[:lng]}&
 &appid=#{ENV['OPEN_WEATHER_API_KEY']}")
     json = JSON.parse(response.body, symbolize_names: true)
-
-    current_forecast = CurrentForecast.new(json)
+    current_forecast_info = json[:current]
+    # require "pry"; binding.pry
+    current_forecast = CurrentForecast.new(current_forecast_info)
+    require "pry"; binding.pry
   end
 
   def get_coordinates(location)
