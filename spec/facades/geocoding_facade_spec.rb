@@ -5,11 +5,6 @@ RSpec.describe 'Geocoding Facade' do
     @geocoding_facade = GeocodingFacade.new('denver,co')
   end
 
-  it '#get_location_data' do
-    geocoding = @geocoding_facade.get_location_data
-    expect(geocoding).to be_a(Hash)
-  end
-
   it '#find_lat_long' do
     geocoding = @geocoding_facade.find_lat_long
     expect(geocoding).to be_a(Hash)
