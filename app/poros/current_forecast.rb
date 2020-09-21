@@ -20,6 +20,5 @@ class CurrentForecast
     @uvi = data[:current][:uvi]
     @sunrise = data[:current][:sunrise]
     @sunset = data[:current][:sunset]
-    @description = data[:current][:weather].first[:main]
   end
 end

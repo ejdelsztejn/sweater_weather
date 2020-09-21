@@ -7,7 +7,8 @@ class Api::V1::ForecastController < ApplicationController
 &appid=#{ENV['OPEN_WEATHER_API_KEY']}")
     json = JSON.parse(response.body, symbolize_names: true)
 
-    
+    current_forecast = CurrentForecast.new(json)
+  end
 
   def get_coordinates(location)
     geocoding_facade = GeocodingFacade.new(location)
