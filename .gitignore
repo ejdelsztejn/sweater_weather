@@ -25,3 +25,10 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore coverage
+/coverage.data
+/coverage/
+
+# Ignore application configuration
+/config/application.yml
