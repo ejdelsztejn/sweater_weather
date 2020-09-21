@@ -1,20 +1,14 @@
 class GeocodingFacade
-  attr_reader :location
+  attr_reader :location,
+              :service
 
   def initialize(location)
     @location = location
+    @service  = GeocodingService.new
   end
 
   def find_lat_long
-    lat_long_data = get_location_data
-    get_location_data[:results].first[:locations].first[:latLng]
-  end
-
-  def get_location_data
-    conn = Faraday.new('http://www.mapquestapi.com')
-
-    response = conn.get("/geocoding/v1/address?key=#{ENV['MAPQUEST_API_KEY']}&location=#{location}")
-
-    JSON.parse(response.body, symbolize_names: true)
+    lat_long_data = service.get_location_data(location)
+    lat_long_data[:results].first[:locations].first[:latLng]
   end
 end
