@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Geocoding Facade' do
+RSpec.describe GeocodingFacade do
   before(:each) do
     @geocoding_facade = GeocodingFacade.new('denver,co')
   end

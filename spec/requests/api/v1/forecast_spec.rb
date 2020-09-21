@@ -7,8 +7,6 @@ RSpec.describe 'Forecast Endpoints' do
       get '/api/v1/forecast?location=denver,co'
       expect(response).to be_successful
       expect(response.content_type).to eq("application/json")
-
-      forecast_data = JSON.parse(response.body, symbolize_names: true)
     end
   end
 end
