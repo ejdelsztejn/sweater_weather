@@ -20,4 +20,9 @@ RSpec.describe ForecastFacade do
     forecast = @forecast_facade.daily_forecast
     expect(forecast).to be_a(Array)
   end
+
+  it '#hourly_forecast' do
+    forecast = @forecast_facade.hourly_forecast
+    expect(forecast).to be_a(Array)
+  end
 end
