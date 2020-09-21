@@ -9,7 +9,7 @@ class Api::V1::ForecastController < ApplicationController
     current_forecast_info = json[:current]
     # require "pry"; binding.pry
     current_forecast = CurrentForecast.new(current_forecast_info)
-
+    require "pry"; binding.pry
   end
 
   def get_coordinates(location)
