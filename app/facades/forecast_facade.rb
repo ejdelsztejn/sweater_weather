@@ -1,12 +1,13 @@
 class ForecastFacade
-  attr_reader :latitude,
+  attr_reader :id,
+              :latitude,
               :longitude,
               :service
 
   def initialize(coordinates)
     @latitude  = coordinates[:lat]
     @longitude = coordinates[:lng]
-    @service = ForecastService.new
+    @service ||= ForecastService.new
   end
 
   def forecast_data
