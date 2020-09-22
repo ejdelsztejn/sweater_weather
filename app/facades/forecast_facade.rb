@@ -1,5 +1,6 @@
 class ForecastFacade
-  attr_reader :latitude,
+  attr_reader :id,
+              :latitude,
               :longitude,
               :service
 
