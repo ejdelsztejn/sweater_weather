@@ -1,5 +1,6 @@
 class FoodieResultsFacade
-  attr_reader :start_place,
+  attr_reader :id,
+              :start_place,
               :end_place,
               :search,
               :forecast_info
@@ -29,8 +30,8 @@ class FoodieResultsFacade
       time_at_arrival.beginning_of_hour == DateTime.strptime(f.dt.to_s,'%s')
     end
     {
-      summary: final_time.summary,
-      temperature: final_time.temp
+      summary: final_time.first.summary,
+      temperature: final_time.first.temp
     }
   end
 

@@ -1,14 +1,10 @@
 class ForecastFacade
   attr_reader :id,
-              # :latitude,
-              # :longitude,
               :forecast_service,
               :geocoding_service,
               :location
 
   def initialize(location)
-    # @latitude            = coordinates[:lat]
-    # @longitude           = coordinates[:lng]
     @geocoding_service ||= GeocodingService.new
     @forecast_service  ||= ForecastService.new
     @location            = location

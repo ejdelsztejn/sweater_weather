@@ -1,6 +1,5 @@
 class Api::V1::ForecastController < ApplicationController
   def index
-    # coordinates = get_coordinates(forecast_params[:location])
     forecast = ForecastFacade.new(forecast_params[:location])
 
     render json: ForecastSerializer.new(forecast)
