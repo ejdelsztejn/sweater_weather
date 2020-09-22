@@ -1,17 +1,30 @@
 class ForecastFacade
   attr_reader :id,
-              :latitude,
-              :longitude,
-              :service
+              # :latitude,
+              # :longitude,
+              :forecast_service,
+              :geocoding_service,
+              :location
 
-  def initialize(coordinates)
-    @latitude  = coordinates[:lat]
-    @longitude = coordinates[:lng]
-    @service ||= ForecastService.new
+  def initialize(location)
+    # @latitude            = coordinates[:lat]
+    # @longitude           = coordinates[:lng]
+    @geocoding_service ||= GeocodingService.new
+    @forecast_service  ||= ForecastService.new
+    @location            = location
+  end
+
+  def get_location
+    data = geocoding_service.get_location_data(location)
+    {
+      coordinates: data[:results].first[:locations].first[:latLng],
+      city: data[:results].first[:locations].first[:adminArea5],
+      state: data[:results].first[:locations].first[:adminArea3]
+    }
   end
 
   def forecast_data
-    service.get_forecast_data(latitude, longitude)
+    forecast_service.get_forecast_data(get_location[:coordinates])
   end
 
   def current_forecast
