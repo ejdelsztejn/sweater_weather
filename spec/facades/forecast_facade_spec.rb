@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe ForecastFacade do
   before(:each) do
     VCR.use_cassette('all_forecast_data') do
-      coordinates = {lat: 64.1814, lng: 51.6941}
-      @forecast_facade = ForecastFacade.new(coordinates)
+      location = 'denver,co'
+      @forecast_facade = ForecastFacade.new(location)
     end
   end
 
@@ -33,6 +33,13 @@ RSpec.describe ForecastFacade do
     VCR.use_cassette('all_forecast_data') do
       forecast = @forecast_facade.hourly_forecast
       expect(forecast).to be_a(Array)
+    end
+  end
+
+  it '#image' do
+    VCR.use_cassette('image') do
+      image = @forecast_facade.image
+      expect(image).to be_a(Image)
     end
   end
 end
