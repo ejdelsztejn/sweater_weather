@@ -9,7 +9,7 @@ RSpec.describe 'Forecast Endpoints' do
       expect(response.content_type).to include("application/json")
 
       json = JSON.parse(response.body, symbolize_names: true)
-
+      require "pry"; binding.pry
       expect(json).to have_key(:data)
       expect(json[:data]).to have_key(:id)
       expect(json[:data][:id]).to eq(nil)
