@@ -24,5 +24,16 @@ RSpec.describe 'Background Endpoints' do
         expect(json[:data][:attributes][:image][:credit]).to have_key(:logo)
       end
     end
+    it 'returns an error when no location given' do
+      get '/api/v1/backgrounds?location='
+      expect(response).to_not be_successful
+      expect(response.content_type).to include("application/json")
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(json).to have_key(:error)
+      expect(json[:error]).to have_key(:message)
+      expect(json[:error][:message]).to eq('Location required')
+    end
   end
 end
