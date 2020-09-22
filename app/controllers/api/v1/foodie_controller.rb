@@ -1,8 +1,18 @@
 class Api::V1::FoodieController < ApplicationController
   def index
-    conn = Faraday.new(url: 'http://www.mapquestapi.com')
-    response = conn.get("/directions/v2/route?key=#{ENV['MAPQUEST_API_KEY']}&from=#{foodie_params[:start]}&to=#{foodie_params[:end]}")
+    distance_service = DistanceService.new
+    distance_service.get_distance(foodie_params[:start], foodie_params[:end])
+    forecast = ForecastFacade.new(foodie_params[:end])
+    coordinates = forecast.get_location[:coordinates]
+
+    conn = Faraday.new(url: 'https://developers.zomato.com') do |req|
+      req.params[:apikey] = ENV['ZOMATO_API_KEY']
+    end
+    response = conn.get("/api/v2.1/search?lat=#{coordinates[:lat]}&lon=#{coordinates[:lng]}&cuisines=#{foodie_params[:search]}")
     json = JSON.parse(response.body, symbolize_names: true)
+    json[:restaurants].each do |restaurant|
+      require "pry"; binding.pry
+    end
   end
 
   private
