@@ -5,8 +5,7 @@ RSpec.describe DistanceService do
     distance_service = DistanceService.new
     results = distance_service.get_distance('denver,co', 'pueblo,co')
 
-    expect(results).to be_a(Hash)
-    expect(results[:realTime]).to be_a(Integer)
-    expect(results[:realTime]).to be(6445)
+    expect(results[:route]).to be_a(Hash)
+    expect(results[:route][:realTime]).to be_a(Integer)
   end
 end
