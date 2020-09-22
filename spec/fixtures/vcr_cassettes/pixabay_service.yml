@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pixabay.com/api/?key=<PIXABAY_API_KEY>&q=boston
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Sep 2020 22:20:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=db14c83eb29821d7987a0d54e17ceefa21600813222; expires=Thu, 22-Oct-20
+        22:20:22 GMT; path=/; domain=.pixabay.com; HttpOnly; SameSite=Lax; Secure
+      - anonymous_user_id=70cd4cf7-10d2-4180-bd2c-a9b9721e3824; Path=/
+      Vary:
+      - Accept, Accept-Language, Cookie
+      - Accept-Encoding
+      Cache-Control:
+      - max-age=86400
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ratelimit-Remaining:
+      - '4962'
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Reset:
+      - '0.025479765829962156'
+      Allow:
+      - POST, OPTIONS, GET
+      Content-Security-Policy:
+      - frame-ancestors none
+      X-Frame-Options:
+      - DENY
+      Content-Language:
+      - en
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD
+      Access-Control-Expose-Headers:
+      - X-RateLimit-Limit,X-RateLimit-Remaining,X-RateLimit-Reset
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - '05598060960000e6dc1bb1b200000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 5d6f69adba2be6dc-EWR
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":250,"totalHits":250,"hits":[{"id":5135499,"pageURL":"https://pixabay.com/photos/columns-building-massachusetts-5135499/","type":"photo","tags":"columns,
+        building, massachusetts","previewURL":"https://cdn.pixabay.com/photo/2020/05/05/23/38/columns-5135499_150.jpg","previewWidth":150,"previewHeight":95,"webformatURL":"https://pixabay.com/get/53e1d6464e5ba514f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":406,"largeImageURL":"https://pixabay.com/get/53e1d6464e5ba514f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":6028,"imageHeight":3825,"imageSize":4576388,"views":4123,"downloads":1967,"favorites":35,"likes":40,"comments":17,"user_id":15683778,"user":"b52_Tresa","userImageURL":"https://cdn.pixabay.com/user/2020/05/06/18-39-10-339_250x250.png"},{"id":1099418,"pageURL":"https://pixabay.com/photos/boston-massachusetts-skyline-1099418/","type":"photo","tags":"boston,
+        massachusetts, skyline","previewURL":"https://cdn.pixabay.com/photo/2015/12/19/03/11/boston-1099418_150.jpg","previewWidth":150,"previewHeight":60,"webformatURL":"https://pixabay.com/get/57e0dc4a4e53a414f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":256,"largeImageURL":"https://pixabay.com/get/57e0dc4a4e53a414f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":8000,"imageHeight":3200,"imageSize":6701151,"views":45333,"downloads":17939,"favorites":98,"likes":106,"comments":14,"user_id":272447,"user":"skeeze","userImageURL":"https://cdn.pixabay.com/user/2020/07/21/01-37-17-778_250x250.jpg"},{"id":1237217,"pageURL":"https://pixabay.com/vectors/cityscape-buildings-skyscrapers-1237217/","type":"vector/svg","tags":"cityscape,
+        buildings, skyscrapers","previewURL":"https://cdn.pixabay.com/photo/2016/03/05/05/55/cityscape-1237217_150.png","previewWidth":150,"previewHeight":88,"webformatURL":"https://pixabay.com/get/57e2d6444853ab14f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.png","webformatWidth":640,"webformatHeight":377,"largeImageURL":"https://pixabay.com/get/57e2d6444853ab14f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.png","imageWidth":1920,"imageHeight":1132,"imageSize":797888,"views":12997,"downloads":5148,"favorites":102,"likes":67,"comments":32,"user_id":1086657,"user":"GDJ","userImageURL":"https://cdn.pixabay.com/user/2015/12/02/23-35-18-266_250x250.png"},{"id":1752894,"pageURL":"https://pixabay.com/photos/boston-terrier-pup-boston-puppy-1752894/","type":"photo","tags":"boston
+        terrier pup, boston, puppy","previewURL":"https://cdn.pixabay.com/photo/2016/10/19/12/49/boston-terrier-pup-1752894_150.jpg","previewWidth":150,"previewHeight":99,"webformatURL":"https://pixabay.com/get/57e7d041425ba814f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":426,"largeImageURL":"https://pixabay.com/get/57e7d041425ba814f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":5472,"imageHeight":3648,"imageSize":3670885,"views":38989,"downloads":30065,"favorites":85,"likes":49,"comments":1,"user_id":3559168,"user":"safepaws","userImageURL":""},{"id":569115,"pageURL":"https://pixabay.com/photos/house-corner-road-urban-crossing-569115/","type":"photo","tags":"house,
+        corner, road","previewURL":"https://cdn.pixabay.com/photo/2014/12/15/14/01/house-569115_150.jpg","previewWidth":150,"previewHeight":99,"webformatURL":"https://pixabay.com/get/53e6dc424b57b10ff3d8992cc620337f1337d7e74e50774975277ad7954fc7_640.jpg","webformatWidth":640,"webformatHeight":426,"largeImageURL":"https://pixabay.com/get/53e6dc424b57b108f5d0846096293f7a1439d6ec514c704f752f73d5944fc75a_1280.jpg","imageWidth":5760,"imageHeight":3840,"imageSize":6443724,"views":13774,"downloads":6140,"favorites":66,"likes":41,"comments":4,"user_id":364018,"user":"Life-Of-Pix","userImageURL":"https://cdn.pixabay.com/user/2014/08/21/23-01-42-554_250x250.jpg"},{"id":403068,"pageURL":"https://pixabay.com/photos/boston-public-library-403068/","type":"photo","tags":"boston
+        public library, architectural detail, facade","previewURL":"https://cdn.pixabay.com/photo/2014/07/27/17/21/boston-public-library-403068_150.jpg","previewWidth":150,"previewHeight":116,"webformatURL":"https://pixabay.com/get/52e0d6434c5ab10ff3d8992cc620337f1337d7e74e50774975277ad7954fc7_640.jpg","webformatWidth":640,"webformatHeight":499,"largeImageURL":"https://pixabay.com/get/52e0d6434c5ab108f5d0846096293f7a1439d6ec514c704f752f73d5944fc75a_1280.jpg","imageWidth":2000,"imageHeight":1560,"imageSize":1745748,"views":16615,"downloads":7407,"favorites":83,"likes":71,"comments":3,"user_id":12019,"user":"12019","userImageURL":""},{"id":85885,"pageURL":"https://pixabay.com/photos/boston-public-library-boston-85885/","type":"photo","tags":"boston
+        public library, boston, massachusetts","previewURL":"https://cdn.pixabay.com/photo/2013/02/24/22/48/boston-public-library-85885_150.jpg","previewWidth":150,"previewHeight":112,"webformatURL":"https://pixabay.com/get/5ee5dd4b4f4faa0df7c5d57ccf2c36781d36dcf8525771497d2e78d6954f_640.jpg","webformatWidth":640,"webformatHeight":480,"largeImageURL":"https://pixabay.com/get/5ee5dd4b4f4fad0bffd8992cc620337f1337d7e74e50774975277ad7954fc7_1280.jpg","imageWidth":4320,"imageHeight":3240,"imageSize":3046070,"views":13910,"downloads":5556,"favorites":46,"likes":34,"comments":6,"user_id":12019,"user":"12019","userImageURL":""},{"id":3555375,"pageURL":"https://pixabay.com/photos/dog-paw-pet-black-white-close-up-3555375/","type":"photo","tags":"dog,
+        paw, pet","previewURL":"https://cdn.pixabay.com/photo/2018/07/22/19/55/dog-3555375_150.jpg","previewWidth":150,"previewHeight":99,"webformatURL":"https://pixabay.com/get/55e5d0464955a914f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":426,"largeImageURL":"https://pixabay.com/get/55e5d0464955a914f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":6000,"imageHeight":4000,"imageSize":3142083,"views":10034,"downloads":7333,"favorites":37,"likes":35,"comments":11,"user_id":9285194,"user":"guvo59","userImageURL":"https://cdn.pixabay.com/user/2018/06/20/08-39-19-754_250x250.jpg"},{"id":1977009,"pageURL":"https://pixabay.com/photos/boston-massachusetts-city-urban-1977009/","type":"photo","tags":"boston,
+        massachusetts, city","previewURL":"https://cdn.pixabay.com/photo/2017/01/13/11/50/boston-1977009_150.jpg","previewWidth":150,"previewHeight":99,"webformatURL":"https://pixabay.com/get/57e9d2444a52a514f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":426,"largeImageURL":"https://pixabay.com/get/57e9d2444a52a514f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":2200,"imageHeight":1467,"imageSize":1572619,"views":9767,"downloads":5552,"favorites":40,"likes":22,"comments":0,"user_id":12019,"user":"12019","userImageURL":""},{"id":3171761,"pageURL":"https://pixabay.com/photos/boston-massachusetts-usa-downtown-3171761/","type":"photo","tags":"boston,
+        massachusetts, usa","previewURL":"https://cdn.pixabay.com/photo/2018/02/21/23/07/boston-3171761_150.jpg","previewWidth":150,"previewHeight":112,"webformatURL":"https://pixabay.com/get/55e1d2424d54ad14f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":480,"largeImageURL":"https://pixabay.com/get/55e1d2424d54ad14f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":3072,"imageHeight":2304,"imageSize":2081625,"views":5429,"downloads":3063,"favorites":38,"likes":23,"comments":4,"user_id":5337,"user":"ArtTower","userImageURL":"https://cdn.pixabay.com/user/2019/07/27/00-12-46-447_250x250.jpg"},{"id":1969705,"pageURL":"https://pixabay.com/photos/lighthouse-night-beacon-historic-1969705/","type":"photo","tags":"lighthouse,
+        night, beacon","previewURL":"https://cdn.pixabay.com/photo/2017/01/10/17/16/lighthouse-1969705_150.jpg","previewWidth":150,"previewHeight":100,"webformatURL":"https://pixabay.com/get/57e9d34a4d52a914f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":427,"largeImageURL":"https://pixabay.com/get/57e9d34a4d52a914f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":3000,"imageHeight":2002,"imageSize":1902252,"views":11962,"downloads":6313,"favorites":77,"likes":59,"comments":4,"user_id":272447,"user":"skeeze","userImageURL":"https://cdn.pixabay.com/user/2020/07/21/01-37-17-778_250x250.jpg"},{"id":1775870,"pageURL":"https://pixabay.com/photos/boston-massachusetts-city-urban-1775870/","type":"photo","tags":"boston,
+        massachusetts, city","previewURL":"https://cdn.pixabay.com/photo/2016/10/27/17/34/boston-1775870_150.jpg","previewWidth":150,"previewHeight":99,"webformatURL":"https://pixabay.com/get/57e7d2464255ac14f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":426,"largeImageURL":"https://pixabay.com/get/57e7d2464255ac14f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":2201,"imageHeight":1467,"imageSize":968439,"views":10052,"downloads":5624,"favorites":32,"likes":26,"comments":0,"user_id":12019,"user":"12019","userImageURL":""},{"id":1448339,"pageURL":"https://pixabay.com/photos/boston-water-front-city-1448339/","type":"photo","tags":"boston,
+        water, front","previewURL":"https://cdn.pixabay.com/photo/2016/06/10/15/51/boston-1448339_150.jpg","previewWidth":150,"previewHeight":100,"webformatURL":"https://pixabay.com/get/57e4d14b4951a514f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":428,"largeImageURL":"https://pixabay.com/get/57e4d14b4951a514f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":3872,"imageHeight":2592,"imageSize":3079653,"views":10009,"downloads":4702,"favorites":19,"likes":25,"comments":2,"user_id":2729166,"user":"bobwright","userImageURL":""},{"id":1977008,"pageURL":"https://pixabay.com/photos/boston-massachusetts-city-urban-1977008/","type":"photo","tags":"boston,
+        massachusetts, city","previewURL":"https://cdn.pixabay.com/photo/2017/01/13/11/50/boston-1977008_150.jpg","previewWidth":150,"previewHeight":84,"webformatURL":"https://pixabay.com/get/57e9d2444a52a414f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":361,"largeImageURL":"https://pixabay.com/get/57e9d2444a52a414f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":2200,"imageHeight":1241,"imageSize":1199696,"views":9437,"downloads":5092,"favorites":25,"likes":24,"comments":2,"user_id":12019,"user":"12019","userImageURL":""},{"id":404526,"pageURL":"https://pixabay.com/photos/boston-massachusetts-404526/","type":"photo","tags":"boston,
+        massachusetts, bunker hill bridge","previewURL":"https://cdn.pixabay.com/photo/2014/07/29/12/32/boston-404526_150.jpg","previewWidth":150,"previewHeight":118,"webformatURL":"https://pixabay.com/get/52e0d1464854b10ff3d8992cc620337f1337d7e74e50774975277ad7954fc7_640.jpg","webformatWidth":640,"webformatHeight":507,"largeImageURL":"https://pixabay.com/get/52e0d1464854b108f5d0846096293f7a1439d6ec514c704f752f73d5944fc75a_1280.jpg","imageWidth":2000,"imageHeight":1585,"imageSize":755381,"views":8492,"downloads":4660,"favorites":26,"likes":24,"comments":2,"user_id":12019,"user":"12019","userImageURL":""},{"id":634020,"pageURL":"https://pixabay.com/photos/canine-dog-boston-terrier-animal-634020/","type":"photo","tags":"canine,
+        dog, boston","previewURL":"https://cdn.pixabay.com/photo/2015/02/12/17/52/canine-634020_150.jpg","previewWidth":150,"previewHeight":112,"webformatURL":"https://pixabay.com/get/50e3d1434852b10ff3d8992cc620337f1337d7e74e50774975277ad7954fc7_640.jpg","webformatWidth":640,"webformatHeight":480,"largeImageURL":"https://pixabay.com/get/50e3d1434852b108f5d0846096293f7a1439d6ec514c704f752f73d5944fc75a_1280.jpg","imageWidth":3264,"imageHeight":2448,"imageSize":1817558,"views":31562,"downloads":27907,"favorites":24,"likes":21,"comments":1,"user_id":272447,"user":"skeeze","userImageURL":"https://cdn.pixabay.com/user/2020/07/21/01-37-17-778_250x250.jpg"},{"id":1775871,"pageURL":"https://pixabay.com/photos/boston-massachusetts-downtown-city-1775871/","type":"photo","tags":"boston,
+        massachusetts, downtown","previewURL":"https://cdn.pixabay.com/photo/2016/10/27/17/34/boston-1775871_150.jpg","previewWidth":150,"previewHeight":112,"webformatURL":"https://pixabay.com/get/57e7d2464255ad14f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":480,"largeImageURL":"https://pixabay.com/get/57e7d2464255ad14f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":2200,"imageHeight":1650,"imageSize":1481702,"views":6412,"downloads":3395,"favorites":21,"likes":22,"comments":1,"user_id":12019,"user":"12019","userImageURL":""},{"id":4220021,"pageURL":"https://pixabay.com/illustrations/boston-terrier-dog-pet-companion-4220021/","type":"illustration","tags":"boston
+        terrier, dog, pet","previewURL":"https://cdn.pixabay.com/photo/2019/05/21/20/03/boston-terrier-4220021_150.png","previewWidth":150,"previewHeight":150,"webformatURL":"https://pixabay.com/get/52e2d7434a50ad14f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.png","webformatWidth":640,"webformatHeight":640,"largeImageURL":"https://pixabay.com/get/52e2d7434a50ad14f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.png","imageWidth":4000,"imageHeight":4000,"imageSize":323970,"views":1515,"downloads":852,"favorites":22,"likes":14,"comments":1,"user_id":12553636,"user":"vecteedesigns","userImageURL":"https://cdn.pixabay.com/user/2019/05/21/19-18-46-777_250x250.jpg"},{"id":1631460,"pageURL":"https://pixabay.com/photos/boston-massachusetts-faneuil-hall-1631460/","type":"photo","tags":"boston,
+        massachusetts, faneuil hall","previewURL":"https://cdn.pixabay.com/photo/2016/08/30/17/12/boston-1631460_150.jpg","previewWidth":150,"previewHeight":116,"webformatURL":"https://pixabay.com/get/57e6d6424e54ac14f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":499,"largeImageURL":"https://pixabay.com/get/57e6d6424e54ac14f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":2200,"imageHeight":1716,"imageSize":1800827,"views":11537,"downloads":4317,"favorites":18,"likes":22,"comments":2,"user_id":12019,"user":"12019","userImageURL":""},{"id":4097914,"pageURL":"https://pixabay.com/photos/jilly-in-boston-terrier-dog-balls-4097914/","type":"photo","tags":"jilly
+        in, boston terrier, dog","previewURL":"https://cdn.pixabay.com/photo/2019/04/02/15/08/jilly-in-4097914_150.jpg","previewWidth":150,"previewHeight":99,"webformatURL":"https://pixabay.com/get/52e0dc444353a814f1dc846096293f7a1439d6ec514c704f752f73d5944fc75a_640.jpg","webformatWidth":640,"webformatHeight":426,"largeImageURL":"https://pixabay.com/get/52e0dc444353a814f6da8c7dda793676113ed8ed5a536c48732f7bdc964ec75aba_1280.jpg","imageWidth":4092,"imageHeight":2728,"imageSize":1275865,"views":2973,"downloads":2058,"favorites":13,"likes":14,"comments":3,"user_id":9220916,"user":"szelyna","userImageURL":"https://cdn.pixabay.com/user/2018/09/10/13-25-23-544_250x250.jpg"}]}'
+  recorded_at: Tue, 22 Sep 2020 22:20:22 GMT
+recorded_with: VCR 6.0.0
