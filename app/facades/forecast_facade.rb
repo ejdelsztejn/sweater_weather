@@ -1,16 +1,14 @@
 class ForecastFacade
   attr_reader :id,
-              # :latitude,
-              # :longitude,
               :forecast_service,
               :geocoding_service,
+              :pixabay_service,
               :location
 
   def initialize(location)
-    # @latitude            = coordinates[:lat]
-    # @longitude           = coordinates[:lng]
     @geocoding_service ||= GeocodingService.new
     @forecast_service  ||= ForecastService.new
+    @pixabay_service   ||= PixabayService.new
     @location            = location
   end
 
@@ -46,5 +44,10 @@ class ForecastFacade
     hourly_forecast_info.map do |forecast|
       HourlyForecast.new(forecast)
     end
+  end
+
+  def image
+    data = pixabay_service.get_image_data(location)
+    require "pry"; binding.pry
   end
 end
