@@ -10,8 +10,8 @@ class Api::V1::FoodieController < ApplicationController
     end
     response = conn.get("/api/v2.1/search?lat=#{coordinates[:lat]}&lon=#{coordinates[:lng]}&cuisines=#{foodie_params[:search]}")
     json = JSON.parse(response.body, symbolize_names: true)
-    json[:restaurants].each do |restaurant|
-      require "pry"; binding.pry
+    restaurant = json[:restaurants].find do |restaurant|
+      restaurant[:restaurant][:cuisines].include?(foodie_params[:search].capitalize)
     end
   end
 
