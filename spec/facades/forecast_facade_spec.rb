@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe ForecastFacade do
   before(:each) do
     # VCR.use_cassette('all_forecast_data') do
-      coordinates = {lat: 64.1814, lng: 51.6941}
-      @forecast_facade = ForecastFacade.new(coordinates)
+      location = 'denver,co'
+      @forecast_facade = ForecastFacade.new(location)
     # end
   end
   #

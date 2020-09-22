@@ -47,7 +47,8 @@ class ForecastFacade
   end
 
   def image
-    data = pixabay_service.get_image_data(location)
-    require "pry"; binding.pry
+    city = location.split(',')[0]
+    data = pixabay_service.get_image_data(city)
+    Image.new(location, data[:hits].first)
   end
 end
