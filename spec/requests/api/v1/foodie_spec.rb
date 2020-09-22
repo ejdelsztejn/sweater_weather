@@ -26,6 +26,9 @@ RSpec.describe 'Foodie Endpoints' do
       expect(json[:data][:attributes][:forecast]).to include(:temperature)
       expect(json[:data][:attributes][:restaurant]).to include(:name)
       expect(json[:data][:attributes][:restaurant]).to include(:address)
+
+      expect(json[:data][:attributes][:forecast]).to_not include(:dt)
+      expect(json[:data][:attributes][:restaurant]).to_not include(:city)
     end
   end
 end

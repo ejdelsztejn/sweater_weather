@@ -16,15 +16,15 @@ RSpec.describe FoodieResultsFacade do
     expect(@foodie_results_facade.travel_time).to be_a(String)
   end
 
-  # it '#forecast' do
-  #   expect(@foodie_results_facade.forecast).to be_a(Hash)
-  #   expect(@foodie_results_facade.forecast).to have_key(:summary)
-  #   expect(@foodie_results_facade.forecast).to have_key(:temperature)
-  # end
-  # 
-  # it '#restaurant' do
-  #   expect(@foodie_results_facade.restaurant).to be_a(Hash)
-  #   expect(@foodie_results_facade.restaurant).to have_key(:name)
-  #   expect(@foodie_results_facade.restaurant).to have_key(:address)
-  # end
+  it '#forecast' do
+    expect(@foodie_results_facade.forecast).to be_a(Hash)
+    expect(@foodie_results_facade.forecast).to have_key(:summary)
+    expect(@foodie_results_facade.forecast).to have_key(:temperature)
+  end
+
+  it '#restaurant' do
+    expect(@foodie_results_facade.restaurant).to be_a(Hash)
+    expect(@foodie_results_facade.restaurant).to have_key(:name)
+    expect(@foodie_results_facade.restaurant).to have_key(:address)
+  end
 end
