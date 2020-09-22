@@ -23,13 +23,13 @@ class FoodieResultsFacade
   def forecast
     distance_service ||= DistanceService.new
     time = distance_service.get_realtime(start_place, end_place)
-    now = DateTime.now.to_time.to_i.to_s
+    now = DateTime.now.to_time.to_i
     time_at_arrival = DateTime.strptime((now + time).to_s,'%s').beginning_of_hour
     final_time = forecast_info.hourly_forecast.select do |f|
       time_at_arrival.beginning_of_hour == DateTime.strptime(f.dt.to_s,'%s')
     end
     {
-      summary: "Cloudy",
+      summary: final_time.summary,
       temperature: final_time.temp
     }
   end
@@ -40,11 +40,14 @@ class FoodieResultsFacade
     conn = Faraday.new(url: 'https://developers.zomato.com') do |req|
       req.params[:apikey] = ENV['ZOMATO_API_KEY']
     end
-    response = conn.get("/api/v2.1/search?lat=#{coordinates[:lat]}&lon=#{coordinates[:lng]}&cuisines=#{foodie_params[:search]}")
+    response = conn.get("/api/v2.1/search?lat=#{coordinates[:lat]}&lon=#{coordinates[:lng]}&cuisines=#{search}")
     json = JSON.parse(response.body, symbolize_names: true)
     restaurant = json[:restaurants].find do |restaurant|
-      restaurant[:restaurant][:cuisines].include?(foodie_params[:search].capitalize)
+      restaurant[:restaurant][:cuisines].include?(search.capitalize)
     end
-    restaurant
+    {
+      name: restaurant[:restaurant][:name],
+      address: restaurant[:restaurant][:location][:address]
+    }
   end
 end

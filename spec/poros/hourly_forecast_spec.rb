@@ -5,6 +5,9 @@ describe HourlyForecast do
     attrs = {
       dt: 1600692843,
       temp: 298.87,
+      weather: [{
+        main: 'Cloudy'
+      }]
     }
 
     hourly_forecast = HourlyForecast.new(attrs)
