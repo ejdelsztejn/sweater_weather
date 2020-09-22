@@ -4,7 +4,7 @@ class GeocodingFacade
 
   def initialize(location)
     @location = location
-    @service  = GeocodingService.new
+    @service  ||= GeocodingService.new
   end
 
   def find_lat_long
