@@ -16,7 +16,36 @@ RSpec.describe 'Forecast Endpoints' do
       expect(forecast[:data][:id]).to eq(nil)
       expect(forecast[:data]).to have_key(:type)
       expect(forecast[:data][:type]).to eq('forecast')
-      
+      expect(forecast[:data]).to have_key(:attributes)
+      expect(forecast[:data][:attributes]).to include(:current_forecast)
+      expect(forecast[:data][:attributes]).to include(:daily_forecast)
+      expect(forecast[:data][:attributes]).to include(:hourly_forecast)
+
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:dt)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:temp)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:weather_condition)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:feels_like)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:humidity)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:visibility)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:uvi)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:sunrise)
+      expect(forecast[:data][:attributes][:current_forecast]).to include(:sunset)
+
+      forecast[:data][:attributes][:daily_forecast].each do |forecast|
+        expect(forecast).to include(:dt)
+        expect(forecast).to include(:temp)
+        expect(forecast).to include(:min_temp)
+        expect(forecast).to include(:max_temp)
+        expect(forecast).to include(:rain)
+        expect(forecast).to include(:snow)
+        expect(forecast).to include(:precipitation)
+        expect(forecast).to include(:weather_condition)
+      end
+
+      forecast[:data][:attributes][:hourly_forecast].each do |forecast|
+        expect(forecast).to include(:dt)
+        expect(forecast).to include(:temp)
+      end
     end
   end
 end
