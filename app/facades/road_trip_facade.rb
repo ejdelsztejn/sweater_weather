@@ -2,7 +2,6 @@ class RoadTripFacade
   attr_reader :id,
               :start_place,
               :end_place,
-              :search,
               :distance_service,
               :forecast_info
 
@@ -10,7 +9,6 @@ class RoadTripFacade
   def initialize(start_place, end_place)
     @start_place        = start_place
     @end_place          = end_place
-    @search             = search
     @distance_service ||= DistanceService.new
     @forecast_info    ||= ForecastFacade.new(end_place)
   end
