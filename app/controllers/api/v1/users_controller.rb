@@ -10,6 +10,8 @@ class Api::V1::UsersController < ApplicationController
     else
       if user.invalid_email?
         render json: { 'error': {'message': 'Valid email address required' }}, status: 400
+      elsif user_params[:password] != user_params[:password_confirmation]
+        render json: { 'error': {'message': 'Password and password confirmation must match' }}, status: 400
       end
     end
   end
