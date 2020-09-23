@@ -106,5 +106,30 @@ RSpec.describe 'Create a User' do
       expect(json[:error]).to have_key(:message)
       expect(json[:error][:message]).to eq('Password and password confirmation must match')
     end
+    it 'if an email is already taken, an error is thrown' do
+      headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+
+      params = {
+        "email": "whatever@example.com",
+        "password": "password",
+        "password_confirmation": "password"
+      }
+
+      user = User.create!(params)
+
+      post '/api/v1/users', headers: headers, params: JSON.generate(params)
+
+      expect(response.status).to eq(400)
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(json).to_not have_key(:data)
+      expect(json).to have_key(:error)
+      expect(json[:error]).to have_key(:message)
+      expect(json[:error][:message]).to eq('Email is already taken')
+    end
   end
 end
