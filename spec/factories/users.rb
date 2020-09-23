@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :user do
-    email { "MyString" }
-    password_digest { "MyString" }
+    email { "whatever@example.com" }
+    password_digest { "password" }
   end
 end
