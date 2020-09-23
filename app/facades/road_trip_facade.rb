@@ -7,7 +7,7 @@ class RoadTripFacade
               :forecast_info
 
 
-  def initialize(start_place, end_place, search)
+  def initialize(start_place, end_place)
     @start_place        = start_place
     @end_place          = end_place
     @search             = search
