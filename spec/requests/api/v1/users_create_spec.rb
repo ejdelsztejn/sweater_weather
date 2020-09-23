@@ -52,7 +52,7 @@ RSpec.describe 'Create a User' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       json = JSON.parse(response.body, symbolize_names: true)
 
@@ -75,7 +75,7 @@ RSpec.describe 'Create a User' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       json = JSON.parse(response.body, symbolize_names: true)
 
@@ -100,7 +100,7 @@ RSpec.describe 'Create a User' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       json = JSON.parse(response.body, symbolize_names: true)
 
@@ -123,7 +123,7 @@ RSpec.describe 'Create a User' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       json = JSON.parse(response.body, symbolize_names: true)
 
@@ -146,7 +146,7 @@ RSpec.describe 'Create a User' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       json = JSON.parse(response.body, symbolize_names: true)
 
@@ -169,7 +169,7 @@ RSpec.describe 'Create a User' do
 
       post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(401)
 
       json = JSON.parse(response.body, symbolize_names: true)
 
