@@ -8,13 +8,7 @@ class Api::V1::UsersController < ApplicationController
     if user.save
       render json: UsersSerializer.new(user), status: 201
     else
-      if user.invalid_email?
-        render json: { 'error': {'message': 'Valid email address required' }}, status: 400
-      elsif user_params[:password] != user_params[:password_confirmation]
-        render json: { 'error': {'message': 'Password and password confirmation must match' }}, status: 400
-      elsif User.where(email: user_params[:email]).empty? == false
-        render json: { 'error': {'message': 'Email is already taken' }}, status: 400
-      end
+      render json: user.error_message(user_params), status: 400
     end
   end
 
