@@ -14,7 +14,7 @@ RSpec.describe 'Create a User' do
       "password_confirmation": "password"
     }
 
-    post '/api/v1/users', headers: headers, params: params
+    post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
     expect(response).to be_successful
     expect(response.content_type).to include("application/json")
