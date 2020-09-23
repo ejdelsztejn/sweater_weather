@@ -9,13 +9,19 @@ class User < ApplicationRecord
   before_validation :set_api_key
 
   def error_message(user_params)
-    if self.invalid_email?
+    if self.blank_field?(user_params)
+      { 'error': {'message': 'Fields cannot be blank' }}
+    elsif self.invalid_email?
       { 'error': {'message': 'Valid email address required' }}
     elsif self.mismatched_passwords?(user_params)
       { 'error': {'message': 'Password and password confirmation must match' }}
     elsif self.email_taken?(user_params)
       { 'error': {'message': 'Email is already taken' }}
     end
+  end
+
+  def blank_field?(user_params)
+    self.email.empty? || user_params[:password].empty? || user_params[:password_confirmation].empty?
   end
 
   def invalid_email?
