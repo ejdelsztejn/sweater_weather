@@ -49,7 +49,7 @@ RSpec.describe 'Log In a User' do
 
       post '/api/v1/sessions', headers: headers, params: JSON.generate(params)
 
-      expect(response).to be_successful
+      expect(response).to_not be_successful
       expect(response.status).to eq(400)
       expect(response.content_type).to include("application/json")
 
