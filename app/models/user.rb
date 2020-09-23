@@ -9,6 +9,6 @@ class User < ApplicationRecord
   private
 
   def set_api_key
-    self.api_key = "I384fHtD1h9XZvs4fGPJUgtt"
+    self.api_key = ApiKey.generator
   end
 end
