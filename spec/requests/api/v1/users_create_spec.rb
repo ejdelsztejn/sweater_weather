@@ -57,7 +57,31 @@ RSpec.describe 'Create a User' do
 
       expect(json).to_not have_key(:data)
       expect(json).to have_key(:error)
-      expect(json[:error]).to eq('Email address is required')
+      expect(json[:error]).to have_key(:message)
+      expect(json[:error][:message]).to eq('Valid email address required')
+    end
+    it 'if email is invalid, an error is thrown' do
+      headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+
+      params = {
+        "email": "fadffdafdfda",
+        "password": "password",
+        "password_confirmation": "password"
+      }
+
+      post '/api/v1/users', headers: headers, params: JSON.generate(params)
+
+      expect(response.status).to eq(400)
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(json).to_not have_key(:data)
+      expect(json).to have_key(:error)
+      expect(json[:error]).to have_key(:message)
+      expect(json[:error][:message]).to eq('Valid email address required')
     end
   end
 end

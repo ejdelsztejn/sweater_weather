@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   describe 'callbacks' do
     it 'will have an api_key automatically assigned when created' do
       user = User.create!(
-        email: 'email',
+        email: 'email@hi.com',
         password: '123',
         password_confirmation: '123'
       )
