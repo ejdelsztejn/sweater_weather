@@ -6,7 +6,7 @@ class Api::V1::UsersController < ApplicationController
       password_confirmation: user_params[:password_confirmation]
     )
 
-    render json: 
+
   end
 
   private
