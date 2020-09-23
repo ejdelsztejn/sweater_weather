@@ -21,7 +21,20 @@ RSpec.describe 'Create a User' do
 
     expect(response).to be_successful
     expect(response.content_type).to include("application/json")
-    require "pry"; binding.pry
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json).to have_key(:data)
+    expect(json[:data]).to have_key(:id)
+    expect(json[:data][:id]).to_not eq(nil)
+    expect(json[:data][:id]).to be_a(String)
+    expect(json[:data]).to have_key(:type)
+    expect(json[:data][:type]).to eq('users')
+    expect(json[:data]).to have_key(:attributes)
+    expect(json[:data][:attributes]).to include(:email)
+    expect(json[:data][:attributes]).to include(:api_key)
+    expect(json[:data][:attributes]).to_not include(:password)
+    expect(json[:data][:attributes]).to_not include(:password_digest)
     end
   end
 end
