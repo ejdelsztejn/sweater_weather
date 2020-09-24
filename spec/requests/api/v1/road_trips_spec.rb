@@ -28,7 +28,7 @@ RSpec.describe 'Road Trip Endpoints' do
       expect(json[:data]).to have_key(:id)
       expect(json[:data][:id]).to eq(nil)
       expect(json[:data]).to have_key(:type)
-      expect(json[:data][:type]).to eq('road_trips')
+      expect(json[:data][:type]).to eq('road_trip')
       expect(json[:data]).to have_key(:attributes)
       expect(json[:data][:attributes]).to include(:origin)
       expect(json[:data][:attributes]).to include(:destination)

@@ -1,6 +1,7 @@
 class Api::V1::RoadTripController < ApplicationController
   def create
-    RoadTripFacade.new(road_trip_params[:origin], road_trip_params[:destination])
+    start_place, end_place = road_trip_params[:origin], road_trip_params[:destination]
+    render json: RoadTripSerializer.new(RoadTripFacade.new(start_place, end_place).get_trip_details)
   end
 
   def road_trip_params
