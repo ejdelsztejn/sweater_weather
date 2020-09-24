@@ -65,5 +65,30 @@ RSpec.describe 'Road Trip Endpoints' do
       expect(json[:error]).to have_key(:message)
       expect(json[:error][:message]).to eq('Correct API Key required')
     end
+    it 'if no API key is sent, an error is thrown' do
+      headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+
+      params = {
+        "origin": "Denver,CO",
+        "destination": "Pueblo,CO",
+        "api_key": ''
+      }
+
+      post '/api/v1/road_trip', headers: headers, params: JSON.generate(params)
+
+      expect(response).to_not be_successful
+      expect(response.content_type).to include("application/json")
+      expect(response.status).to eq(401)
+
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(json).to_not have_key(:data)
+      expect(json).to have_key(:error)
+      expect(json[:error]).to have_key(:message)
+      expect(json[:error][:message]).to eq('Correct API Key required')
+    end
   end
 end
