@@ -5,6 +5,9 @@ describe HourlyForecast do
     attrs = {
       dt: 1600692843,
       temp: 298.87,
+      weather: [{
+        main: 'Cloudy'
+      }]
     }
 
     hourly_forecast = HourlyForecast.new(attrs)
@@ -12,5 +15,6 @@ describe HourlyForecast do
     expect(hourly_forecast).to be_a HourlyForecast
     expect(hourly_forecast.dt).to eq(1600692843)
     expect(hourly_forecast.temp).to eq(299)
+    expect(hourly_forecast.summary).to eq('Cloudy')
   end
 end
