@@ -11,6 +11,4 @@ class GeocodingFacade
     lat_long_data = service.get_location_data(location)
     lat_long_data[:results].first[:locations].first[:latLng]
   end
-
-
 end
