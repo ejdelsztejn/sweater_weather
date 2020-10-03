@@ -72,5 +72,6 @@ RSpec.configure do |config|
     config.filter_sensitive_data('<OPEN_WEATHER_API_KEY>') { ENV['OPEN_WEATHER_API_KEY'] }
     config.filter_sensitive_data('<PIXABAY_API_KEY>') { ENV['PIXABAY_API_KEY'] }
     config.allow_http_connections_when_no_cassette = true
+    config.configure_rspec_metadata!
   end
 end
