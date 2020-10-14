@@ -4,8 +4,8 @@
 
 This project was completed during the end of Module 3 of the Backend Engineering Program at Turing School which focuses on building and consuming API's.
 
-[Original Project Page](https://backend.turing.io/module3/projects/sweater_weather/)
-[Technical Requirements](https://backend.turing.io/module3/projects/sweater_weather/requirements)
+- [Original Project Page](https://backend.turing.io/module3/projects/sweater_weather/)
+- [Technical Requirements](https://backend.turing.io/module3/projects/sweater_weather/requirements)
 
 ### Versions
 
